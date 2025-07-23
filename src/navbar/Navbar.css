@@ -1,0 +1,115 @@
+/* add green color for slim header */
+.it-header-slim-wrapper.bg-success-dark {
+  background-color: #005c46 !important; 
+}
+
+/* remove outline from links */
+.nav-link:focus,
+.nav-link:active,
+.nav-link:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  border-bottom: 2px solid #fff !important;
+  text-decoration: none !important;
+}
+
+/* remove outline from buttons */
+.btn:focus,
+.btn:active,
+.btn:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+
+/* remove outline from slim header and header central + social icons*/
+.it-header-slim-wrapper a:focus,
+.it-header-center-wrapper a:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-color: transparent !important;
+}
+
+
+/* .search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-toggle {
+  background: transparent;
+  border: none;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.search-toggle .icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 100px;
+  padding: 0 0.75rem;
+  margin-left: 0.75rem;
+  height: 36px;
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 2px solid var(--bs-success);
+}
+
+.search-wrapper.open .search-form {
+  width: 240px;
+  opacity: 1;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+  background: transparent;
+  color: #000;
+  width: 100%;
+}
+
+.search-input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.search-input::placeholder {
+  color: #888;
+  font-style: italic;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  padding-left: 0.5rem;
+  cursor: pointer;
+  color: var(--bs-success);
+}
+
+.close-btn .icon {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+} */
+
+
+
+
+
+
+

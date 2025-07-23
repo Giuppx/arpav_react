@@ -1,0 +1,9 @@
+/* remove outline from links */
+.it-footer a:focus,
+.it-footer a:active,
+.it-footer a:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  text-decoration: none !important;
+}
