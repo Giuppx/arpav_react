@@ -1,10 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
-import App from "./App";
+
 // import bootstrap
 import "bootstrap-italia/dist/css/bootstrap-italia.min.css";
 import "bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js";
+
+import App from "./App";
+import "./index.css";
 
 import reportWebVitals from "./reportWebVitals";
 
