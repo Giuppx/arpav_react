@@ -7,3 +7,7 @@
   border: none !important;
   text-decoration: none !important;
 }
+
+.section.section-image::before{
+  background: none;
+}

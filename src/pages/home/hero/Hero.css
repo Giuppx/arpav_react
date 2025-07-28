@@ -1,0 +1,20 @@
+ /* background hero section  */
+ .it-hero-wrapper.it-overlay.it-primary .img-responsive-wrapper:after {
+         background-color: rgba(0, 128, 85, 0.75) !important;
+
+      }
+
+      .bg-dark .btn-primary{
+        background-color: #0e9266;
+        color: #fff !important;
+       }
+
+       .bg-dark .btn-primary:hover{
+        color: #329574 !important;
+       }
+       
+       .btn:focus{
+        outline: none !important;
+       }
+
+      

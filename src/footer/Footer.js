@@ -8,7 +8,7 @@ export default function Footer() {
 			{/* Partners */}
 			<div
 				id="partners"
-				className="section section-image m-0"
+				className="section section-image m-0 bg-light"
 				style={{
 					backgroundImage: "url('/assets/img/partners.png')",
 					backgroundSize: "cover",
@@ -40,19 +40,21 @@ export default function Footer() {
 							<h4 className="text-uppercase">Amministrazione</h4>
 							<ul className="list-unstyled">
 								<li>
-									<Link to="#">Giunta e Consiglio</Link>
+									<Link to="/lavorazione">Giunta e Consiglio</Link>
 								</li>
 								<li>
-									<Link to="#">Aree di competenza</Link>
+									<Link to="/lavorazione">Aree di competenza</Link>
 								</li>
 								<li>
-									<Link to="/form-amministrazione">Area amministrativa</Link>
+									<Link to="/amministrazione">Area amministrativa</Link>
 								</li>
 								<li>
-									<Link to="#">Luoghi</Link>
+									<Link to="/lavorazione">Luoghi</Link>
 								</li>
 								<li>
-									<Link to="#">Associazioni e società partecipate</Link>
+									<Link to="/lavorazione">
+										Associazioni e società partecipate
+									</Link>
 								</li>
 							</ul>
 						</div>
@@ -61,22 +63,22 @@ export default function Footer() {
 							<h4 className="text-uppercase">Servizi</h4>
 							<ul className="list-unstyled">
 								<li>
-									<Link to="#">Pagamenti</Link>
+									<Link to="/lavorazione">Pagamenti</Link>
 								</li>
 								<li>
-									<Link to="#">Sostegno</Link>
+									<Link to="/lavorazione">Sostegno</Link>
 								</li>
 								<li>
-									<Link to="#">Domande e iscrizioni</Link>
+									<Link to="/lavorazione">Domande e iscrizioni</Link>
 								</li>
 								<li>
-									<Link to="#">Segnalazioni</Link>
+									<Link to="/lavorazione">Segnalazioni</Link>
 								</li>
 								<li>
-									<Link to="#">Autorizzazioni e concessioni</Link>
+									<Link to="/lavorazione">Autorizzazioni e concessioni</Link>
 								</li>
 								<li>
-									<Link to="#">Certificati e dichiarazioni</Link>
+									<Link to="/lavorazione">Certificati e dichiarazioni</Link>
 								</li>
 							</ul>
 						</div>
@@ -85,13 +87,13 @@ export default function Footer() {
 							<h4 className="text-uppercase">Novità</h4>
 							<ul className="list-unstyled">
 								<li>
-									<Link to="#">Notizie</Link>
+									<Link to="/lavorazione">Notizie</Link>
 								</li>
 								<li>
-									<Link to="#">Eventi</Link>
+									<Link to="/lavorazione">Eventi</Link>
 								</li>
 								<li>
-									<Link to="#">Comunicati stampa</Link>
+									<Link to="/lavorazione">Comunicati stampa</Link>
 								</li>
 							</ul>
 						</div>
@@ -100,19 +102,19 @@ export default function Footer() {
 							<h4 className="text-uppercase">Documenti</h4>
 							<ul className="list-unstyled">
 								<li>
-									<Link to="#">Progetti e attività</Link>
+									<Link to="/lavorazione">Progetti e attività</Link>
 								</li>
 								<li>
-									<Link to="#">Delibere, determine e ordinanze</Link>
+									<Link to="/lavorazione">Delibere, determine e ordinanze</Link>
 								</li>
 								<li>
-									<Link to="#">Bandi</Link>
+									<Link to="/lavorazione">Bandi</Link>
 								</li>
 								<li>
-									<Link to="#">Concorsi</Link>
+									<Link to="/lavorazione">Concorsi</Link>
 								</li>
 								<li>
-									<Link to="#">Albo pretorio</Link>
+									<Link to="/lavorazione">Albo pretorio</Link>
 								</li>
 							</ul>
 						</div>
@@ -188,11 +190,11 @@ export default function Footer() {
 					{/* Bottom links */}
 					<div className="row">
 						<div className="col-12 d-flex flex-wrap gap-3 small">
-							<Link to="#">Media Policy</Link>
-							<Link to="#">Note Legali</Link>
-							<Link to="/privacy-policy">Privacy Policy</Link>
-							<Link to="#">Mappa del sito</Link>
-							<Link to="#">Dichiarazione Accessibilità</Link>
+							<Link to="/lavorazione">Media Policy</Link>
+							<Link to="/lavorazione">Note Legali</Link>
+							<Link to="/privacyPolicy">Privacy Policy</Link>
+							<Link to="/lavorazione">Mappa del sito</Link>
+							<Link to="/lavorazione">Dichiarazione Accessibilità</Link>
 						</div>
 					</div>
 				</div>

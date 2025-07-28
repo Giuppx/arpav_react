@@ -1,13 +1,19 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* remove outline from buttons */
+.btn:focus,
+.btn:active,
+.btn:focus-visible,
+.bg-dark .btn:focus:not([data-focus-mouse=true]) {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* remove outline from list  links */
+.list-item:focus,
+.list-item:active,
+.list-item:focus-visible,
+.list-item:focus-within {
+	outline: none !important;
+	box-shadow: none !important;
+	border: none !important;
 }

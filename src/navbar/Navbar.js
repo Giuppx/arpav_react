@@ -4,13 +4,11 @@
  * @RICERCA_INPUT
  * implementare la ricerca input; (opzionale)
  *
- * @BURGER_TOGGLE
- * migliorare il layout per mobile;
- * implementare apertura/chiusura con le voci di navigazione;
+ *
  *
  */
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
 import "./Navbar.css";
@@ -22,9 +20,19 @@ export default function Navbar() {
 	const toggleDropdown = () => setDropdownOpen((prev) => !prev);
 	const closeDropdown = () => setDropdownOpen(false);
 
+	//toggle menu
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
+	const toggleMenu = () => {
+		setIsMenuOpen((prev) => !prev);
+	};
+
+	useEffect(() => {
+		console.log(isMenuOpen ? "open" : "close");
+	}, [isMenuOpen]);
+
 	//toggle search
-	const [searchOpen, setSearchOpen] = useState(false);
-	const toggleSearch = () => setSearchOpen((prev) => !prev);
+	// const [searchOpen, setSearchOpen] = useState(false);
+	// const toggleSearch = () => setSearchOpen((prev) => !prev);
 
 	return (
 		<header>
@@ -140,6 +148,18 @@ export default function Navbar() {
 									</Link>
 								</div>
 								<div className="it-right-zone">
+									{/* burger toggle */}
+									<button
+										className="custom-navbar-toggler"
+										type="button"
+										aria-controls="nav0"
+										aria-label="Mostra/Nascondi la navigazione"
+										onClick={toggleMenu}>
+										<svg className="icon bg-override">
+											<use href="/svg/sprites.svg#it-burger" />
+										</svg>
+									</button>
+
 									{/* social links */}
 									<div className="it-socials d-none d-lg-block d-lg-flex">
 										<span>Seguici su</span>
@@ -188,8 +208,7 @@ export default function Navbar() {
 										<a
 											style={{ cursor: "pointer" }}
 											className="search-link rounded-icon"
-											aria-label="Cerca nel sito"
-											onClick={toggleSearch}>
+											aria-label="Cerca nel sito">
 											<svg className="icon icon-success">
 												<use href="/svg/sprites.svg#it-search" />
 											</svg>
@@ -210,22 +229,15 @@ export default function Navbar() {
 							<nav
 								className="navbar navbar-expand-lg has-megamenu"
 								aria-label="Navigazione principale">
-								{/* burger toggle */}
-								<button
-									className="custom-navbar-toggler"
-									type="button"
-									aria-controls="nav0"
-									aria-label="Mostra/Nascondi la navigazione"
-									data-bs-toggle="navbarcollapsible"
-									data-bs-target="#nav0">
-									<svg className="icon bg-override">
-										<use href="/svg/sprites.svg#it-burger" />
-									</svg>
-								</button>
-
-								<div className="navbar-collapsable" id="nav0" tabIndex="-1">
+								<div
+									className={`navbar-collapsable  ${isMenuOpen ? "show" : ""}`}
+									id="nav0"
+									tabIndex="-1">
 									<div className="close-div">
-										<button className="btn close-menu" type="button">
+										<button
+											className="btn close-menu"
+											onClick={toggleMenu}
+											type="button">
 											<span className="visually-hidden">
 												Nascondi la navigazione
 											</span>
@@ -238,7 +250,6 @@ export default function Navbar() {
 										<ul className="navbar-nav">
 											<li className="nav-item active">
 												<NavLink
-													style={{ outline: "none" }}
 													className={({ isActive }) =>
 														`nav-link outline-none ${isActive ? "active" : ""}`
 													}
@@ -270,7 +281,7 @@ export default function Navbar() {
 													className={({ isActive }) =>
 														`nav-link ${isActive ? "active" : ""}`
 													}
-													to="/dati-ambientali">
+													to="/datiAmbientali">
 													<span>Dati ambientali</span>
 												</NavLink>
 											</li>
