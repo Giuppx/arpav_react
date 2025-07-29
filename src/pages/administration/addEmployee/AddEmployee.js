@@ -72,10 +72,10 @@ export default class AddEmployee extends React.Component {
 		if (!cognome.trim()) {
 			errors.cognome = "Campo obbligatorio!";
 		} else {
-			const SURNAME_REGEX = /^[A-Za-z]{4,}$/;
+			const SURNAME_REGEX = /^[A-Za-zÀ-ÖØ-öø-ÿ]+(?: [A-Za-zÀ-ÖØ-öø-ÿ]+)*$/;
 			if (!SURNAME_REGEX.test(cognome))
 				errors.cognome =
-					"Il cognome deve contenere almeno 4 lettere senza spazi,numeri o simboli";
+					"Il cognome deve contenere almeno 4 lettere senza numeri o simboli";
 		}
 
 		if (!email.trim()) {
