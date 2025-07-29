@@ -8,7 +8,7 @@
  *
  */
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
 import "./Navbar.css";
@@ -25,10 +25,6 @@ export default function Navbar() {
 	const toggleMenu = () => {
 		setIsMenuOpen((prev) => !prev);
 	};
-
-	useEffect(() => {
-		console.log(isMenuOpen ? "open" : "close");
-	}, [isMenuOpen]);
 
 	//toggle search
 	// const [searchOpen, setSearchOpen] = useState(false);
@@ -154,6 +150,7 @@ export default function Navbar() {
 										type="button"
 										aria-controls="nav0"
 										aria-label="Mostra/Nascondi la navigazione"
+										aria-expanded={isMenuOpen}
 										onClick={toggleMenu}>
 										<svg className="icon bg-override">
 											<use href="/svg/sprites.svg#it-burger" />
@@ -230,28 +227,39 @@ export default function Navbar() {
 								className="navbar navbar-expand-lg has-megamenu"
 								aria-label="Navigazione principale">
 								<div
-									className={`navbar-collapsable  ${isMenuOpen ? "show" : ""}`}
+									className={`navbar-collapsable  ${
+										isMenuOpen ? "show d-block expanded" : "collapse"
+									}`}
+									aria-hidden={!isMenuOpen}
 									id="nav0"
 									tabIndex="-1">
-									<div className="close-div">
-										<button
-											className="btn close-menu"
-											onClick={toggleMenu}
-											type="button">
-											<span className="visually-hidden">
-												Nascondi la navigazione
-											</span>
-											<svg className="icon">
-												<use href="/svg/sprites.svg#it-close-big" />
-											</svg>
-										</button>
-									</div>
-									<div className="menu-wrapper">
+									<div
+										className={`menu-wrapper w-50 ${
+											isMenuOpen ? "bg-light" : ""
+										}`}>
+										<div className="close-div">
+											<button
+												className="btn close-menu"
+												onClick={toggleMenu}
+												type="button">
+												<span className="visually-hidden">
+													Nascondi la navigazione
+												</span>
+												<svg className="icon icon-danger ">
+													<use href="/svg/sprites.svg#it-close-big" />
+												</svg>
+											</button>
+										</div>
 										<ul className="navbar-nav">
 											<li className="nav-item active">
 												<NavLink
+													onClick={() => {
+														setIsMenuOpen(false);
+													}}
 													className={({ isActive }) =>
-														`nav-link outline-none ${isActive ? "active" : ""}`
+														`nav-link outline-none ${
+															isActive ? "active" : ""
+														} ${isMenuOpen ? "text-success" : ""}`
 													}
 													to="/"
 													end>
@@ -260,8 +268,13 @@ export default function Navbar() {
 											</li>
 											<li className="nav-item">
 												<NavLink
+													onClick={() => {
+														setIsMenuOpen(false);
+													}}
 													className={({ isActive }) =>
-														`nav-link ${isActive ? "active" : ""}`
+														`nav-link ${isActive ? "active" : ""}  ${
+															isMenuOpen ? "text-success" : ""
+														}`
 													}
 													to="/amministrazione">
 													<span>Amministrazione</span>
@@ -269,8 +282,13 @@ export default function Navbar() {
 											</li>
 											<li className="nav-item">
 												<NavLink
+													onClick={() => {
+														setIsMenuOpen(false);
+													}}
 													className={({ isActive }) =>
-														`nav-link ${isActive ? "active" : ""}`
+														`nav-link ${isActive ? "active" : ""}  ${
+															isMenuOpen ? "text-success" : ""
+														}`
 													}
 													to="/territorio">
 													<span>Territorio</span>
@@ -278,17 +296,27 @@ export default function Navbar() {
 											</li>
 											<li className="nav-item">
 												<NavLink
+													onClick={() => {
+														setIsMenuOpen(false);
+													}}
 													className={({ isActive }) =>
-														`nav-link ${isActive ? "active" : ""}`
+														`nav-link ${isActive ? "active" : ""} ${
+															isMenuOpen ? "nav-link text-success" : ""
+														}`
 													}
 													to="/datiAmbientali">
-													<span>Dati ambientali</span>
+													<span>Dati</span>
 												</NavLink>
 											</li>
 											<li className="nav-item">
 												<NavLink
+													onClick={() => {
+														setIsMenuOpen(false);
+													}}
 													className={({ isActive }) =>
-														`nav-link ${isActive ? "active" : ""}`
+														`nav-link ${isActive ? "active" : ""}  ${
+															isMenuOpen ? "text-success" : ""
+														}`
 													}
 													to="/servizi">
 													<span>Servizi</span>

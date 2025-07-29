@@ -1,37 +1,25 @@
 /* add green color for slim header */
 .it-header-slim-wrapper.bg-success-dark {
-  background-color: #005c46 !important; 
+	background-color: #005c46 !important;
 }
 
 /* remove outline from links */
 .nav-link:focus,
 .nav-link:active,
 .nav-link:focus-visible {
-  outline: none !important;
-  box-shadow: none !important;
-  border-bottom: 2px solid #fff !important;
-  text-decoration: none !important;
+	outline: none !important;
+	box-shadow: none !important;
+	border-bottom: 2px solid #fff !important;
+	text-decoration: none !important;
 }
-
 
 /* remove outline from slim header and header central + social icons*/
 .it-header-slim-wrapper a:focus,
 .it-header-center-wrapper a:focus,
-.custom-navbar-toggler:focus{
-  outline: none !important;
-  box-shadow: none !important;
-  border: none !important;
-  border-color: transparent !important;
+.custom-navbar-toggler:focus {
+	outline: none !important;
+	box-shadow: none !important;
+	border: none !important;
+	border-color: transparent !important;
 }
-
-
-
-
-
-
-
-
-
-
-
 
